@@ -14,7 +14,7 @@ class EmployeeTable extends Component {
 
     searchEmployees = query => {
         API.search(query)
-            .then(res => console.log(res))
+            .then(res => this.setState({ results: res.data.results }))
             .catch(err => console.log(err));
     }
 
@@ -33,20 +33,29 @@ class EmployeeTable extends Component {
 
     render() {
         return(
-            <table className="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Image</th>
-                <th scope="col">Name</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Email</th>
-                <th scope="col">DOB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <EmployeeRow />
-            </tbody>
-          </table>
+            <div>
+                <table className="table table-dark">
+                    <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">DOB</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.results.map(result => (
+                            <th scope="row"><img src={result.picture.thumbnail}></img></th>
+                            <td>{result.name.first} {result.name.last}</td>
+                            <td>{result.cell}</td>
+                            <td>{result.email}</td>
+                            <td>{result.dob.date}</td> 
+                        ))}  
+                        <EmployeeRow />
+                    </tbody>
+                </table>
+            </div>
         )
     }
 }
