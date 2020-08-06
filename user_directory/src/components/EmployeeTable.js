@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EmployeeRow from './EmployeeRow';
 import API from '../utils/API';
 
 class EmployeeTable extends Component {
@@ -32,7 +33,7 @@ class EmployeeTable extends Component {
 
     render() {
         return(
-            <table class="table table-dark">
+            <table className="table table-dark">
             <thead>
               <tr>
                 <th scope="col">Image</th>
@@ -43,13 +44,7 @@ class EmployeeTable extends Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">Image</th>
-                <td>Name</td>
-                <td>Phone</td>
-                <td>Email</td>
-                <td>DOB</td>
-              </tr>
+              <EmployeeRow />
             </tbody>
           </table>
         )
