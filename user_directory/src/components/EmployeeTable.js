@@ -4,7 +4,7 @@ import API from '../utils/API';
 
 class EmployeeTable extends Component {
     state = {
-        result: {},
+        result: [],
         search: "",
     };
 
@@ -14,8 +14,13 @@ class EmployeeTable extends Component {
 
     searchEmployees = query => {
         API.search(query)
-            .then(res => {this.setState({ result: res.data.results })
-            console.log(this.state.result);
+            .then(res => {
+                for(let i = 0; i < res.data.results.length; i++){
+                    let dob = new Date(res.data.results[i].dob.date)
+                    res.data.results[i].dob.date = `${dob.getMonth()+1}/${dob.getDate()}/${dob.getFullYear()}`
+                }
+                this.setState({ result: res.data.results })
+                
             })
             .catch(err => console.log(err));
     }
@@ -49,6 +54,7 @@ class EmployeeTable extends Component {
                     <tbody> 
                         {this.state.result.map(result => (
                             <EmployeeRow 
+                            key={result.id.value}
                             picture={result.picture.thumbnail}
                             name={result.name.first}
                             cell={result.cell}
