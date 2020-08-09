@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/kylest0kes/user_directory/static/js/main.25ae3717.chunk.js",
+    "main.js.map": "/kylest0kes/user_directory/static/js/main.25ae3717.chunk.js.map",
+    "runtime-main.js": "/kylest0kes/user_directory/static/js/runtime-main.3eaca46b.js",
+    "runtime-main.js.map": "/kylest0kes/user_directory/static/js/runtime-main.3eaca46b.js.map",
+    "static/js/2.c2d4de2a.chunk.js": "/kylest0kes/user_directory/static/js/2.c2d4de2a.chunk.js",
+    "static/js/2.c2d4de2a.chunk.js.map": "/kylest0kes/user_directory/static/js/2.c2d4de2a.chunk.js.map",
+    "index.html": "/kylest0kes/user_directory/index.html",
+    "precache-manifest.9f7beef2899f79a002194d3c1a32712a.js": "/kylest0kes/user_directory/precache-manifest.9f7beef2899f79a002194d3c1a32712a.js",
+    "service-worker.js": "/kylest0kes/user_directory/service-worker.js",
+    "static/js/2.c2d4de2a.chunk.js.LICENSE.txt": "/kylest0kes/user_directory/static/js/2.c2d4de2a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3eaca46b.js",
+    "static/js/2.c2d4de2a.chunk.js",
+    "static/js/main.25ae3717.chunk.js"
+  ]
+}
