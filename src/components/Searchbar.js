@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Search(props) {
+function Searchbar(props) {
     return (
         <form>
             <div className="form-group">
@@ -22,4 +22,4 @@ function Search(props) {
     )
 }
 
-export default Search;
+export default Searchbar;
